@@ -1,0 +1,12 @@
+{
+  "name": "NeiApp",
+  "displayName": "NeiApp",
+  "expo": {
+    "name": "NeiApp",
+    "slug": "NeiApp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}

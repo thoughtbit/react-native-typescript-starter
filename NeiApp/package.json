@@ -1,0 +1,49 @@
+{
+  "main": "index.js",
+  "scripts": {
+    "start": "npx react-native start",
+    "dev:all": "npm run dev:ios && npm run dev:android",
+    "dev:ios": "npx react-native run-ios",
+    "dev:android": "npx react-native run-android && npm run logcat",
+    "build:android": "npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
+    "build:ios": "npx react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ./ios/bundle/index.ios.jsbundle --assets-dest ./ios/bundle",
+    "web": "expo start --web",
+    "test": "jest --watchAll",
+    "logcat": "adb logcat *:S ReactNative:V ReactNativeJS:V"
+  },
+  "dependencies": {
+    "expo": "~38.0.8",
+    "expo-splash-screen": "~0.5.0",
+    "expo-status-bar": "^1.0.2",
+    "expo-updates": "~0.2.14",
+    "react": "~16.11.0",
+    "react-dom": "~16.11.0",
+    "react-native": "~0.62.2",
+    "react-native-gesture-handler": "~1.7.0",
+    "react-native-reanimated": "~1.10.1",
+    "react-native-safe-area-context": "~3.1.1",
+    "react-native-screens": "~2.9.0",
+    "react-native-unimodules": "~0.10.1",
+    "react-native-web": "~0.11.7",
+    "react-native-webview": "^10.3.3",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^6.0.0",
+    "redux-persist-transform-encrypt": "^2.0.1",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "~7.9.0",
+    "@types/react": "~16.9.23",
+    "@types/react-dom": "~16.9.8",
+    "@types/react-native": "~0.61.23",
+    "babel-preset-expo": "~8.2.0",
+    "jest-expo": "~38.0.0",
+    "typescript": "~3.9.5"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "private": true
+}
