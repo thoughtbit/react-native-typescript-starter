@@ -3,7 +3,6 @@ import { Platform, StyleSheet } from 'react-native';
 import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import HomeScreen from "../screens/HomeScreen";
 import MessageScreen from "../screens/MessageScreen";
@@ -128,7 +127,7 @@ const MineNavigator = () => {
         options={{ headerTitle: '我的' }}
       />
       <MineStack.Screen
-        name="Profile"
+        name="ProfileScreen"
         component={ProfileScreen}
         options={({ route }) => ({ title: route.params.name })}
       />

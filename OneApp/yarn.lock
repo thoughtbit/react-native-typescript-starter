@@ -1802,6 +1802,11 @@
   dependencies:
     "@types/yargs-parser" "*"
 
+"@uiw/react-native-amap-geolocation@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.npm.taobao.org/@uiw/react-native-amap-geolocation/download/@uiw/react-native-amap-geolocation-1.5.0.tgz#9a249c3d1bef478fb10283a54f0d13d1952dc2d4"
+  integrity sha1-miScPRvvR4+xAoOlTw0T0ZUtwtQ=
+
 "@unimodules/core@~5.3.0":
   version "5.3.0"
   resolved "https://registry.npm.taobao.org/@unimodules/core/download/@unimodules/core-5.3.0.tgz#c425e59b1f9c1e2c91b235b6192e5f622a47d833"

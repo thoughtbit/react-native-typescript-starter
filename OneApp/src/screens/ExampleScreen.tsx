@@ -1,8 +1,9 @@
 import * as React from 'react';
 import {StyleSheet, Text, View, TouchableHighlight, FlatList} from 'react-native';
-import {StackNavigationProp} from "@react-navigation/stack";
+import {StackNavigationProp} from '@react-navigation/stack';
 import AppbarExample from './examples/AppbarExample';
-import TextExample from "./examples/TextExample";
+import TextExample from './examples/TextExample';
+import AmapGeolocationExample from './examples/AmapGeolocationExample';
 
 export const examples: Record<
   string,
@@ -11,6 +12,7 @@ export const examples: Record<
   // 演示例子列表
   appbar: AppbarExample,
   text: TextExample,
+  amap: AmapGeolocationExample,
 }
 
 type Props = {
@@ -31,10 +33,12 @@ export default function ExampleScreen({navigation}: Props) {
       <TouchableHighlight
         underlayColor={'#eee'}
         style={styles.item}
-        onPress={()=> navigation.navigate(id, {
-          itemId: id,
-          title: data.title
-        })}>
+        onPress={() => {
+          navigation.navigate(id, {
+            itemId: id,
+            title: data.title
+          });
+        }}>
         <Text>{data.title}</Text>
       </TouchableHighlight>
     );
